@@ -75,10 +75,11 @@ namespace ControlVee.Port.LINQ
                          where x.I < i
                          select new { x.I, x.S, z = x.I * x.I, l = x.S.Length };
 
-            foreach (var item in queryH)
-            {
-                Console.Write(item);
-            }
+            var queryK = queryJ.ToList();
+
+            // Test.
+            i = 4;
+            var queryL = queryJ.ToList();
         }
     }
 
