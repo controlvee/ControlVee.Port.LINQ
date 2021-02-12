@@ -67,6 +67,14 @@ namespace ControlVee.Port.LINQ
                          where x.Length < i
                          select x;
 
+            var queryI = from x in listOfTest
+                         where x.I < i
+                         select x;
+
+            var queryJ = from x in listOfTest
+                         where x.I < i
+                         select new { x.I, x.S, z = x.I * x.I, l = x.S.Length };
+
             foreach (var item in queryH)
             {
                 Console.Write(item);
