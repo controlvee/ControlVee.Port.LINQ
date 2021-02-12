@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ControlVee.Port.LINQ
 {
@@ -6,7 +7,9 @@ namespace ControlVee.Port.LINQ
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int[] arrayOfInt = new int[] { 0,1,2,3,4,5,6,7,8,9 };
+            List<string> listOfString = new List<string>();
+            Dictionary<int, Test> dictionaryOfTest = new Dictionary<int, Test>();
         }
     }
 
