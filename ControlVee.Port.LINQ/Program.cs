@@ -39,8 +39,10 @@ namespace ControlVee.Port.LINQ
 
             var queryA = from x in arrayOfInt
                         select x;
+
             var queryB = from x in listOfString
                         select x;
+
             var queryC = from x in listOfTest
                         select x;
 
@@ -48,34 +50,24 @@ namespace ControlVee.Port.LINQ
                          where x < 5
                          select x;
 
-            foreach (var item in queryD)
-            {
-                Console.Write(item);
-            }
-
             var queryE = from x in arrayOfInt
                          where x > 5
                          select x;
-
-            foreach (var item in queryE)
-            {
-                Console.Write(item);
-            }
 
             var queryF = from x in listOfString
                          where x.Length > 3
                          select x;
 
-            foreach (var item in queryF)
-            {
-                Console.Write(item);
-            }
-
             var queryG = from x in listOfString
                          where x.Length < 3
                          select x;
 
-            foreach (var item in queryG)
+            int i = 5;
+            var queryH = from x in listOfString
+                         where x.Length < i
+                         select x;
+
+            foreach (var item in queryH)
             {
                 Console.Write(item);
             }
