@@ -73,10 +73,10 @@ namespace ControlVee.Port.LINQ
 
             var queryJ = from x in listOfTest
                          where x.I < i
+                         // new = readonly.
                          select new { x.I, x.S, z = x.I * x.I, l = x.S.Length };
 
             var queryK = queryJ.ToList();
-
             // Test.
             i = 4;
             var queryL = queryJ.ToList();
